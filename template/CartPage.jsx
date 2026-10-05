@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
+import ImgQR from '../src/assets/qr.jpg';
 function CartPage({ cart, setCart }) {
   const { t } = useTranslation();
   const [paymentMethod, setPaymentMethod] = useState('khqr'); // khqr ឬ cash
@@ -203,7 +203,7 @@ function CartPage({ cart, setCart }) {
               <div className="bg-red-50 p-4 rounded-2xl border border-red-200">
                 <p className="text-xs text-red-600 font-bold mb-2">KHQR Payment</p>
                 <div className="w-48 h-48 bg-gray-200 mx-auto flex items-center justify-center rounded-lg text-4xl overflow-hidden">
-                    <img className="w-full h-full object-cover" src="/src/assets/qr.jpg" alt="KHQR Code" />
+                    <img className="w-full h-full object-cover" src={ImgQR} alt="KHQR Code" />
                 </div>
                 <p className="text-lg font-bold text-red-600 mt-2">${totalPrice.toFixed(2)}</p>
               </div>
